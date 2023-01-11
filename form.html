@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <title>Form</title>
+    <style>
+        label{
+            font-weight: bold;
+            margin: 2px;
+        }
+        
+        input{
+            width: 260px;
+            margin: 2px;
+            height: 20px;
+            border-radius: 3px;
+            margin-bottom: 12px;
+            padding: 4px;
+        }
+        select{
+            width: 270px;
+            margin: 2px;
+            height: 30px;
+            border-radius: 3px;
+            margin-bottom: 12px;
+        }
+        input{
+            border: 1px rgb(190, 190, 190) solid;
+        }
+        body{
+            background-color: rgb(218, 218, 218);
+            font-family: sans-serif;
+        }
+        button{
+            margin: 2px;
+            border: 1px rgb(190, 190, 190) solid;
+            padding: 10px;
+            border-radius: 4px;
+            background-color: rgb(9, 134, 150);
+            color: white;
+        }
+        p{
+            margin-top: 0px;
+        }
+    </style>
+</head>
+<body>
+    <p>Can you please provide your personal details?</p>
+    <form >
+        <label for="name" >Name</label> <br>
+        <input type="text" placeholder="Enter your name here" id="nameInp" required="true"> <br>
+        <label for="dob">Date of birth</label><br>
+        <input type="date" name="dob" placeholder="Select DOB" id="dtInp" ><br>
+        <label for="number">Contact Number</label><br>
+        <input type="number" name="number" placeholder="Enter Contact Number" id="cNumber"><br>
+        <label for="country">Country</label><br>
+        <select id="countryDdl" name="country"  onchange="SetStateDdl(this.value)" required="true">
+            <option value="0" selected="true" disabled="true">--Select Country--</option></select required><br>
+            <label for="state">State</label><br>
+        <select name="state" id="stateDdl" >
+            <option value="0" selected="true" disabled="true">--Select State--</option>
+        </select><br>
+        <label for="email">Email</label><br>
+        <input type="text" placeholder="Enter your email address" name="email" id="email"><br>
+        <button type="submit" onclick="ValidateData()">Submit</button>
+    </form>
+    <script src="/form.js"></script>
+</body>
+</html>
